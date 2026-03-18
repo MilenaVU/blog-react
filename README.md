@@ -10,30 +10,46 @@
   - Listar todos los posts
   - Buscar posts por `id` o `userId`
   - Ver detalles del post, autor, vistas, likes y dislikes
+-----------------------------------------------------------------------
+🚀 Tecnologías usadas
 
-## 🔑 Credenciales de prueba
+**Esta aplicación utiliza:**
 
-Para iniciar sesión en la aplicación, utiliza los siguientes datos de prueba:
-
-- **Usuario:** admin
-- **Contraseña:** admin123
-
-> ⚠️ Nota: Estas credenciales solo funcionan para propósitos de prueba. 
-  
+🧩 React – Biblioteca de UI moderna
+📍 React Router – Para navegación de páginas dentro de la SPA
+🔐 Firebase Authentication – Login con Google
+📡 Fetch API – Para consumir datos de DummyJSON
+⚡ Vite – Para bundling y desarrollo rápido en React
 
 ---
 
 ## 📂 Estructura del proyecto
-react-blog-app/ # Carpeta raíz del proyecto
-├─ node_modules/ # Dependencias instaladas por npm
-├─ src/ # Carpeta con todo el código fuente
-│ ├─ pages/ # Componentes de páginas
-│ │ ├─ Home.jsx # Página principal con lista de posts y buscador
-│ │ ├─ Login.jsx # Página de login
-│ │ └─ PostDetail.jsx # Página de contenido para los  detalles de un post
-│ ├─ App.jsx # Componente principal que contiene las rutas
-│ └─ index.jsx # pagina de inicio
-├─ package.json # Configuración y dependencias del proyecto
-├─ package-lock.json # Bloqueo de versiones de dependencias
-├─ README.md # Este archivo con documentación
-└─ vite.config.js # Configuración de Vite
+blog-react/
+├─ blog-react/
+│   ├─ public/                 # Archivos públicos
+│   ├─ src/
+│   │   ├─ components/         # Componentes reutilizables (Navbar, etc.)
+│   │   ├─ context/            # Contextos de React, p. ej. AuthContext
+│   │   ├─ pages/              # Páginas principales (Home, Login, PostDetail, Users)
+│   │   ├─ assets/             # Imágenes y recursos
+│   │   ├─ firebase.js         # Configuración de Firebase
+│   │   ├─ App.jsx             # Componente principal con rutas
+│   │   └─ main.jsx            # Punto de entrada de la app
+│   ├─ package.json            # Dependencias y scripts
+│   ├─ vite.config.js          # Config de Vite
+│   └─ .gitignore              # Archivos ignorados por Git
+├─ README.md                  # Documentación de este proyecto
+
+🧠 **Flujo de navegación**
+
+👤 Login (Google) → /login
+📄 Home (lista de posts) → /
+📌 Detalle de post → /post/:id
+👥 Lista de usuarios → /users
+🚪 Cerrar sesión → redirige al login
+
+🧾 **Como instalar y usar**
+git clone https://github.com/MilenaVU/blog-react.git
+cd blog-react
+npm install
+npm run dev
